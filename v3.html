@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fce4ec; /* Light pink */
+  }
+
+  #valentineForm {
+    text-align: center;
+    background-color: #ffffff; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    color: #e91e63; /* Pink */
+  }
+
+  p {
+    color: #333333; /* Dark grey */
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  input[type="radio"] {
+    display: none; /* Hide the default radio button */
+  }
+
+  /* Custom radio button style */
+  .radio-container {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .radio-container input[type="radio"] + label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8bbd0; /* Light pink */
+    color: #e91e63; /* Pink */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .radio-container input[type="radio"]:checked + label {
+    background-color: #e91e63; /* Pink */
+    color: #ffffff; /* White */
+  }
+
+  #responseMessage {
+    color: #e91e63; /* Pink */
+    font-weight: bold;
+    font-size: 100px; /* Increase font size */
+  }
+
+  #specialImage {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Will You Be My Valentine?</h1>
+
+<form id="valentineForm">
+  <p>Dear Rein,</p>
+
+  <p>As Valentine's Day approaches, I wanted to take a moment to express my feelings. You mean a lot to me, and I cherish the moments we've shared together.</p>
+
+  <p>So, with a heart full of hope, I ask: Will you be my Valentine?</p>
+
+  <!-- Custom radio buttons for Yes and No -->
+  <div class="radio-container">
+    <input type="radio" id="response_yes" name="response" value="yes">
+    <label for="response_yes">Yes</label>
+  </div>
+
+  <div class="radio-container">
+    <input type="radio" id="response_no" name="response" value="no">
+    <label for="response_no">No</label>
+  </div>
+
+  <p>If you'd like, you can click <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.instagram.com%2Fdingusforpresident%2Fp%2FCyte6gsu478%2F&psig=AOvVaw2qfI9CLizYhLcazA6Ntmri&ust=1707903002371000&source=images&cd=vfe&opi=89978449&ved=0CBcQjRxqFwoTCPDTw9KAqIQDFQAAAAAdAAAAABAE">here</a> to see a special pick up line I prepared for you.</p>
+
+  <p id="responseMessage"></p>
+
+  <!-- Image to show up with the response -->
+  <img id="specialImage" src="https://media1.tenor.com/m/JsskaUSwVlsAAAAC/cat-cat-love.gif" alt="Special Picture">
+
+  <p>With love,</p>
+
+  <p>RevaGod</p>
+</form>
+
+<script>
+document.getElementById("valentineForm").addEventListener("change", function(event) {
+  var response = document.querySelector('input[name="response"]:checked');
+  var responseMessage = document.getElementById("responseMessage");
+  var specialImage = document.getElementById("specialImage");
+  if (response) {
+    if (response.value === "yes") {
+      responseMessage.textContent = "YAYYYY";
+      specialImage.style.display = "inline"; // Show the image
+    } else if (response.value === "no") {
+      responseMessage.textContent = "AWTS GEGE";
+      specialImage.style.display = "none"; // Hide the image
+    }
+  } else {
+    responseMessage.textContent = "";
+    specialImage.style.display = "none"; // Hide the image
+  }
+});
+</script>
+
+</body>
+</html>
