@@ -73,7 +73,7 @@
 <h1>Will You Be My Valentine?</h1>
 
 <form id="valentineForm">
-  <p>Dear Rein,</p>
+  <p>Dear Crush,</p>
 
   <p>As Valentine's Day approaches, I wanted to take a moment to express my feelings. You mean a lot to me, and I cherish the moments we've shared together.</p>
 
@@ -99,7 +99,7 @@
 
   <p>With love,</p>
 
-  <p>RevaGod</p>
+  <p>your admirer</p>
 </form>
 
 <script>
@@ -110,10 +110,12 @@ document.getElementById("valentineForm").addEventListener("change", function(eve
   if (response) {
     if (response.value === "yes") {
       responseMessage.textContent = "YAYYYY";
+      specialImage.src = "https://media1.tenor.com/m/Ce_EIG6qg0kAAAAC/happy-happy-happy-happy.gif"; // Update image source for "Yes" response
       specialImage.style.display = "inline"; // Show the image
     } else if (response.value === "no") {
-      responseMessage.textContent = "AWTS GEGE";
-      specialImage.style.display = "none"; // Hide the image
+      responseMessage.textContent = "EDI WAG!";
+      specialImage.src = "https://media1.tenor.com/m/MQDyV2T6m3MAAAAC/crying-cat.gif"; // Update image source for "No" response
+      specialImage.style.display = "inline"; // Show the image
     }
   } else {
     responseMessage.textContent = "";
